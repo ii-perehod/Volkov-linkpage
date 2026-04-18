@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Instagram, Youtube, Twitter, Send, Music2, Globe, Mail } from "lucide-react";
+import { Instagram, Youtube, Twitter, Send, Globe, Mail } from "lucide-react";
 import { SocialButton } from "@/components/SocialButton";
 import avatar from "@/assets/avatar.jpg";
 
