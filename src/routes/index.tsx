@@ -7,12 +7,12 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Алина Стар — все мои соцсети в одном месте" },
+      { title: "Роман Волков — все мои соцсети в одном месте" },
       {
         name: "description",
-        content: "Подписывайся на меня в Instagram, YouTube, TikTok, Telegram и других платформах.",
+        content: "Подписывайся на меня в Telegram, Instagram, YouTube, TikTok и других платформах.",
       },
-      { property: "og:title", content: "Алина Стар — все мои соцсети" },
+      { property: "og:title", content: "Роман Волков — все мои соцсети" },
       {
         property: "og:description",
         content: "Все ссылки на мои соцсети в одном месте.",
@@ -21,14 +21,15 @@ export const Route = createFileRoute("/")({
   }),
 });
 
+// 👇 Замени href и handle на свои данные. Telegram уже подставлен.
 const links = [
-  { href: "https://instagram.com", icon: Instagram, label: "Instagram", handle: "@alina.star" },
-  { href: "https://youtube.com", icon: Youtube, label: "YouTube", handle: "Alina Star" },
-  { href: "https://tiktok.com", icon: Music2, label: "TikTok", handle: "@alina.star" },
-  { href: "https://t.me", icon: Send, label: "Telegram", handle: "@alinastar" },
-  { href: "https://twitter.com", icon: Twitter, label: "Twitter / X", handle: "@alinastar" },
-  { href: "https://example.com", icon: Globe, label: "Мой сайт", handle: "alinastar.com" },
-  { href: "mailto:hello@alinastar.com", icon: Mail, label: "Сотрудничество", handle: "hello@alinastar.com" },
+  { href: "https://t.me/govoritvolkov", icon: Send, label: "Telegram", handle: "@govoritvolkov" },
+  { href: "https://instagram.com/", icon: Instagram, label: "Instagram", handle: "@твой_ник" },
+  { href: "https://youtube.com/@", icon: Youtube, label: "YouTube", handle: "Roman Volkov" },
+  { href: "https://tiktok.com/@", icon: Music2, label: "TikTok", handle: "@твой_ник" },
+  { href: "https://x.com/", icon: Twitter, label: "Twitter / X", handle: "@твой_ник" },
+  { href: "https://example.com", icon: Globe, label: "Мой сайт", handle: "romanvolkov.com" },
+  { href: "mailto:hello@example.com", icon: Mail, label: "Сотрудничество", handle: "hello@example.com" },
 ];
 
 function Index() {
@@ -40,7 +41,7 @@ function Index() {
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[oklch(0.72_0.22_350)] to-[oklch(0.78_0.18_50)] blur-2xl opacity-50" />
             <img
               src={avatar}
-              alt="Алина Стар"
+              alt="Роман Волков"
               width={128}
               height={128}
               className="avatar-glow relative h-32 w-32 rounded-full object-cover ring-4 ring-white/10"
@@ -48,10 +49,10 @@ function Index() {
           </div>
 
           <h1 className="mt-6 text-3xl font-bold tracking-tight">
-            <span className="gradient-text">Алина Стар</span>
+            <span className="gradient-text">Роман Волков</span>
           </h1>
           <p className="mt-2 max-w-xs text-sm text-muted-foreground sm:text-base">
-            ✨ Блогер о стиле, путешествиях и жизни. Все мои ссылки — здесь.
+            🎙 Говорю о важном. Все мои соцсети — здесь.
           </p>
         </header>
 
@@ -62,7 +63,7 @@ function Index() {
         </section>
 
         <footer className="mt-12 text-center text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Алина Стар</p>
+          <p>© {new Date().getFullYear()} Роман Волков</p>
         </footer>
       </div>
     </main>
