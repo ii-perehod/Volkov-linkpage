@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Instagram, Send, AtSign, Mail } from "lucide-react";
+import { Send, AtSign, Mail } from "lucide-react";
 import { SocialButton } from "@/components/SocialButton";
+import { VkIcon } from "@/components/VkIcon";
 import avatar from "@/assets/avatar.jpg";
 
 export const Route = createFileRoute("/")({
@@ -10,7 +11,7 @@ export const Route = createFileRoute("/")({
       { title: "Роман Волков — все мои соцсети в одном месте" },
       {
         name: "description",
-        content: "Подписывайся на меня в Telegram, Instagram, YouTube, TikTok и других платформах.",
+        content: "Подписывайся на меня в Telegram, ВКонтакте, Threads и других платформах.",
       },
       { property: "og:title", content: "Роман Волков — все мои соцсети" },
       {
@@ -24,7 +25,7 @@ export const Route = createFileRoute("/")({
 // 👇 Замени href и handle на свои данные. Telegram уже подставлен.
 const links = [
   { href: "https://t.me/govoritvolkov", icon: Send, label: "Telegram", handle: "@govoritvolkov" },
-  { href: "https://instagram.com/", icon: Instagram, label: "Instagram", handle: "@твой_ник" },
+  { href: "https://vk.ru/govoritvolkov", icon: VkIcon, label: "ВКонтакте", handle: "@govoritvolkov" },
   { href: "https://www.threads.net/@roman.volkov14", icon: AtSign, label: "Threads", handle: "@roman.volkov14" },
   { href: "mailto:govoritvolkov.pr@mail.ru", icon: Mail, label: "Сотрудничество", handle: "govoritvolkov.pr@mail.ru" },
 ];

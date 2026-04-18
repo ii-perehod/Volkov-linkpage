@@ -1,8 +1,10 @@
-import type { LucideIcon } from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
+
+type IconComponent = ComponentType<SVGProps<SVGSVGElement> & { strokeWidth?: number }>;
 
 interface SocialButtonProps {
   href: string;
-  icon: LucideIcon;
+  icon: IconComponent;
   label: string;
   handle: string;
   delay?: number;
