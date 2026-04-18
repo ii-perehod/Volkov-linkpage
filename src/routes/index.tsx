@@ -34,36 +34,55 @@ const links = [
 
 function Index() {
   return (
-    <main className="flex min-h-screen flex-col items-center px-5 py-12 sm:py-16">
+    <main className="relative z-10 flex min-h-screen flex-col items-center px-5 py-12 sm:py-16">
       <div className="w-full max-w-md">
+        <div className="mb-8 flex items-center justify-between font-mono-display text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+          <span>// rv_links</span>
+          <span className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+            online
+          </span>
+        </div>
+
         <header className="flex flex-col items-center text-center">
           <div className="relative animate-float">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[oklch(0.72_0.22_350)] to-[oklch(0.78_0.18_50)] blur-2xl opacity-50" />
             <img
               src={avatar}
               alt="Роман Волков"
-              width={128}
-              height={128}
-              className="avatar-glow relative h-32 w-32 rounded-full object-cover ring-4 ring-white/10"
+              width={144}
+              height={144}
+              className="avatar-glow relative h-36 w-36 rounded-full object-cover"
             />
           </div>
 
-          <h1 className="mt-6 text-3xl font-bold tracking-tight">
-            <span className="gradient-text">Роман Волков</span>
+          <span className="tag-chip mt-6">Журналист · Подкастер</span>
+
+          <h1 className="mt-4 font-mono-display text-4xl font-extrabold uppercase tracking-tight sm:text-5xl">
+            Роман <span className="gradient-text">Волков</span>
           </h1>
-          <p className="mt-2 max-w-xs text-sm text-muted-foreground sm:text-base">
-            🎙 Говорю о важном. Все мои соцсети — здесь.
+
+          <div className="mt-3 flex w-full max-w-xs items-center gap-3">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/40" />
+            <span className="font-mono-display text-[10px] uppercase tracking-[0.3em] text-primary">
+              ch.001
+            </span>
+            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/40" />
+          </div>
+
+          <p className="mt-4 max-w-xs text-sm text-muted-foreground sm:text-base">
+            Говорю громко о том, что важно. Все каналы связи — ниже.
           </p>
         </header>
 
         <section className="mt-10 flex flex-col gap-3" aria-label="Ссылки на соцсети">
           {links.map((link, i) => (
-            <SocialButton key={link.label} {...link} delay={i * 80} />
+            <SocialButton key={link.label} {...link} delay={i * 80} index={i} />
           ))}
         </section>
 
-        <footer className="mt-12 text-center text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Роман Волков</p>
+        <footer className="mt-12 flex items-center justify-between font-mono-display text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+          <span>© {new Date().getFullYear()} R.V.</span>
+          <span>v.1.0 — built loud</span>
         </footer>
       </div>
     </main>
