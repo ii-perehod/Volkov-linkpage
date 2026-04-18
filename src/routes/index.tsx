@@ -67,7 +67,7 @@ function Index() {
           </div>
 
           <p className="mt-4 max-w-xs text-sm text-muted-foreground sm:text-base">
-            Говорю громко о том, что важно. Все каналы связи — ниже.
+            Авторский блог. Честно. Иронично. Без нытья. Все каналы связи — ниже.
           </p>
         </header>
 
