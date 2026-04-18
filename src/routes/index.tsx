@@ -52,7 +52,7 @@ function Index() {
             />
           </div>
 
-          <span className="tag-chip mt-6">Журналист · Подкастер</span>
+          <span className="tag-chip mt-6">Блогер</span>
 
           <h1 className="mt-4 font-mono-display text-4xl font-extrabold uppercase tracking-tight sm:text-5xl">
             Роман <span className="gradient-text">Волков</span>
