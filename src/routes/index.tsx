@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Instagram, Youtube, Twitter, Send, Music2, Globe, Mail } from "lucide-react";
+import { Instagram, Youtube, Twitter, Send, Globe, Mail } from "lucide-react";
 import { SocialButton } from "@/components/SocialButton";
 import avatar from "@/assets/avatar.jpg";
 
@@ -26,10 +26,9 @@ const links = [
   { href: "https://t.me/govoritvolkov", icon: Send, label: "Telegram", handle: "@govoritvolkov" },
   { href: "https://instagram.com/", icon: Instagram, label: "Instagram", handle: "@твой_ник" },
   { href: "https://youtube.com/@", icon: Youtube, label: "YouTube", handle: "Roman Volkov" },
-  { href: "https://tiktok.com/@", icon: Music2, label: "TikTok", handle: "@твой_ник" },
   { href: "https://x.com/", icon: Twitter, label: "Twitter / X", handle: "@твой_ник" },
   { href: "https://example.com", icon: Globe, label: "Мой сайт", handle: "romanvolkov.com" },
-  { href: "mailto:hello@example.com", icon: Mail, label: "Сотрудничество", handle: "hello@example.com" },
+  { href: "mailto:govoritvolkov.pr@mail.ru", icon: Mail, label: "Сотрудничество", handle: "govoritvolkov.pr@mail.ru" },
 ];
 
 function Index() {
